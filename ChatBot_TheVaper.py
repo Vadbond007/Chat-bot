@@ -190,7 +190,7 @@ def start(update: Update, context: CallbackContext) -> None:
     user = update.effective_user
     context.bot.send_message(chat_id=update.effective_chat.id, text=f"Привет👋, {user.first_name}! Я бот, давай пообщаемся.", reply_markup=main_menu())
 
-def echo(update: Update, context: CallbackContext, conn: psycopg2.extensions.connection) -> None:
+def echo(update: Update, context: CallbackContext) -> None:
     # Получение текста сообщения
     text = update.message.text
     
